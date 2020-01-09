@@ -2,11 +2,13 @@ import { createMachine, State } from "xstate";
 
 export enum MachineState {
   Hidden = "Hidden",
-  HiddenToPreview = "HiddenToPreview",
+  HiddenToPreview = "HiddenToPreview", // —
   Preview = "Preview",
-  PreviewToFullscreen = "PreviewToFullscreen",
-  Fullscreen = "Fullscreen"
-}
+  PreviewToFullscreen = "PreviewToFullscreen", // — follow to scroll
+  PreviewSticky = 'PreviewSticky', 
+  Fullscreen = "Fullscreen",
+  FullscreenFinal = 'FullscreenFinal'
+  }
 
 export enum MachineEvent {
   Next = 'Next',
